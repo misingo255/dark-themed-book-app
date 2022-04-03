@@ -1,37 +1,37 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
+void main() => runApp(const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MoviApp(),
+      home: BookApp(),
     ));
 
-class MoviApp extends StatefulWidget {
-  const MoviApp({Key? key}) : super(key: key);
+class BookApp extends StatefulWidget {
+  const BookApp({Key? key}) : super(key: key);
 
   @override
-  _MoviAppState createState() => _MoviAppState();
+  _BookAppState createState() => _BookAppState();
 }
 
-class _MoviAppState extends State<MoviApp> {
+class _BookAppState extends State<BookApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff1C262F),
+      backgroundColor: const Color(0xff045b62),
       appBar: AppBar(
-        backgroundColor: Color(0xFF1B2C3B),
+        backgroundColor: const Color(0xFF072f36),
         elevation: 0.0,
-        title: Text("Niche Movies"),
+        title: const Text("Book Shelf"),
         actions: [
           IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.more_vert,
                 color: Colors.white,
               ))
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.only(top: 12.0),
+        padding: const EdgeInsets.only(top: 12.0),
         child: ListView(
           children: [
             Container(
@@ -39,7 +39,7 @@ class _MoviAppState extends State<MoviApp> {
               width: double.infinity,
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                children: [
+                children: const [
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 12.0),
                     child: Chip(
@@ -49,19 +49,19 @@ class _MoviAppState extends State<MoviApp> {
                           color: Colors.white,
                         ),
                       ),
-                      backgroundColor: Colors.orange,
+                      backgroundColor: Color(0xFF072f36),
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 12.0),
                     child: Chip(
                       label: Text(
-                        "Action",
+                        "Fiction",
                         style: TextStyle(
                           color: Colors.white,
                         ),
                       ),
-                      backgroundColor: Colors.blueGrey,
+                      backgroundColor: Color(0xFF072f36),
                     ),
                   ),
                   Padding(
@@ -73,29 +73,29 @@ class _MoviAppState extends State<MoviApp> {
                           color: Colors.white,
                         ),
                       ),
-                      backgroundColor: Colors.blueGrey,
+                      backgroundColor: Color(0xFF072f36),
                     ),
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 12.0),
                     child: Chip(
                       label: Text(
-                        "Comedy",
+                        "Economics",
                         style: TextStyle(
                           color: Colors.white,
                         ),
                       ),
-                      backgroundColor: Colors.blueGrey,
+                      backgroundColor: Color(0xFF072f36),
                     ),
                   ),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 12,
             ),
             Row(
-              children: [
+              children: const [
                 Padding(
                   padding: EdgeInsets.only(left: 12),
                   child: Text(
@@ -109,7 +109,7 @@ class _MoviAppState extends State<MoviApp> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 12,
             ),
             Container(
@@ -121,32 +121,32 @@ class _MoviAppState extends State<MoviApp> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12.0),
                     child:
-                        MoviCard("The Outside War", "8.5/10", "assets/1.jpg"),
+                        BookCard("The monk who sold his ferrari", "8.5/10", "assets/1.jpg"),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: MoviCard("Annihilation", "8.3/10", "assets/2.jpg"),
+                    child: BookCard("The alchemist", "8.3/10", "assets/2.jpg"),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: MoviCard("Man of Steel", "8.3/10", "assets/4.jpg"),
+                    child: BookCard("Rich dad, poor dad", "8.3/10", "assets/4.jpg"),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: MoviCard("Joker", "8.3/10", "assets/3.jpg"),
+                    child: BookCard("The 5 AM club", "8.3/10", "assets/3.jpg"),
                   ),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 12,
             ),
             Row(
-              children: [
+              children: const [
                 Padding(
                   padding: EdgeInsets.only(left: 12),
                   child: Text(
-                    "Recommended Movies",
+                    "Recommended Books",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.orange,
@@ -156,7 +156,7 @@ class _MoviAppState extends State<MoviApp> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 12,
             ),
             Container(
@@ -167,19 +167,29 @@ class _MoviAppState extends State<MoviApp> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: MoviCard("Joker", "8.5/10", "assets/3.jpg"),
+                    child: BookCard("Atomic Habits", "8.5/10", "assets/5.jpg"),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: MoviCard("Man of Steel", "8.3/10", "assets/4.jpg"),
+                    child: BookCard("Think Like A Monk", "8.3/10", "assets/6.jpg"),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: MoviCard("Annihilation", "8.3/10", "assets/2.jpg"),
+                    child: BookCard("Angels And Demons", "8.3/10", "assets/7.jpg"),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: MoviCard("Outside War", "8.3/10", "assets/1.jpg"),
+                    child: BookCard("How To Win Friends And Influence People", "8.3/10", "assets/8.jpg"),
+                  ),
+
+                   Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                    child: BookCard("The Da Vinci Code", "8.3/10", "assets/9.jpg"),
+                  ),
+
+                   Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                    child: BookCard("Sell Like Crazy", "8.3/10", "assets/10.jpg"),
                   ),
                 ],
               ),
@@ -190,7 +200,7 @@ class _MoviAppState extends State<MoviApp> {
     );
   }
 
-  Widget MoviCard(String Title, String Rate, String imgPath) {
+  Widget BookCard(String Title, String Rate, String imgPath) {
     return InkWell(
       onTap: () {},
       child: Column(
@@ -204,23 +214,23 @@ class _MoviAppState extends State<MoviApp> {
               height: 160.0,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5.0,
           ),
           Text(
             Title,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
               fontSize: 26,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           Text(
             Rate,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 18.0,
             ),
